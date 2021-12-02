@@ -1,6 +1,7 @@
 package net.brunomendola.querity.spring.data.jpa.domain;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import net.brunomendola.querity.test.domain.ProductCategory;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
@@ -16,7 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Person extends AbstractPersistable<Long> implements net.brunomendola.querity.test.domain.Person<Long, Address, Location, Order> {
+public class Person extends FindIssue implements net.brunomendola.querity.test.domain.Person<Long, Address, Location, Order>  {
   @NonNull
   private String firstName;
   private String lastName;

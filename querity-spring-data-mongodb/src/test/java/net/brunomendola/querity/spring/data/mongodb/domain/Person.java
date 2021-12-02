@@ -15,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Person implements net.brunomendola.querity.test.domain.Person<String, Address, Location, Order> {
+public class Person extends FindIssue implements net.brunomendola.querity.test.domain.Person<String, Address, Location, Order> {
   @Id
   private String id;
   @NonNull

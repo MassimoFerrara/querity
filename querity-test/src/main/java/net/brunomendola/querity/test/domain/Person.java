@@ -3,7 +3,7 @@ package net.brunomendola.querity.test.domain;
 import java.math.BigDecimal;
 import java.util.List;
 
-public interface Person<K extends Comparable<K>, A extends Address, L extends Location, O extends Order<? extends OrderItem>> {
+public interface Person<K extends Comparable<K>, A extends Address, L extends Location, O extends Order<? extends OrderItem>> extends FindIssue {
   K getId();
 
   String getFirstName();

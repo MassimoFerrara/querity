@@ -79,6 +79,16 @@ public abstract class QuerityGenericSpringTestSuite<T extends Person<K, ?, ?, ? 
     }
 
     @Test
+    void findIssue() {
+      Query query = Querity.query()
+              .filter(filterBy("taaaac", EQUALS, "ops"))
+              .build();
+      List<T> result = querity.findAll(getEntityClass(), query);
+      assertThat(result).isNotEmpty();
+      assertThat(result.get(0).getTaaaac()).isEqualTo("ops");
+    }
+
+    @Test
     void givenFilterWithStringEqualsCondition_whenFilterAll_thenReturnOnlyFilteredElements() {
       Query query = Querity.query()
           .filter(filterBy(PROPERTY_LAST_NAME, EQUALS, entity1.getLastName()))
